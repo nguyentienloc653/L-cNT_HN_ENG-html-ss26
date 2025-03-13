@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function check() {
+        let num = [];
+        let check = 0;
+        let length = +prompt(`nhập số lượng phần tử:`);
+        for (let i = 0; i < length; i++) {
+          num.push(prompt(`nhập phần tử thứ ${i + 1} :`));
+        }
+        for (let i = 0; i < length; i++) {
+          if (!num[i] || isNaN(num[i])) {
+            check = 1;
+          }
+        }
+        if (check) {
+          alert(`dữ liệu không hợp lệ`);
+        } else {
+          const num2 = num.map((value) => value * 2);
+          const num3 = num2.filter((value) => value % 2 == 0);
+          alert(`mảng mới là: ${num3}`);
+        }
+      }
+      check();
+    </script>
+  </body>
+</html>
