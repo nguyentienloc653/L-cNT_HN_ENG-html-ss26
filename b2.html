@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = ["apple", "banana", "cat", "elephant", "dog"];
+      let result = arr.filter((element, index, arr) => {
+        return element.length > 5;
+      });
+      console.log(result);
+    </script>
+  </body>
+</html>
